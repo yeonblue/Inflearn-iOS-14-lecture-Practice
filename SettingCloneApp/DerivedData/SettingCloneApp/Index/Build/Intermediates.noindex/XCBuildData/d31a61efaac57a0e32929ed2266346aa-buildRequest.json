@@ -1,0 +1,58 @@
+{
+  "_buildCommand2" : {
+    "command" : "prepareForIndexing",
+    "enableIndexBuildArena" : true,
+    "targets" : null
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "db1fc1d6dd1260c8c266ecc6c6b5e21b4971907a50f4f7f77eaab64aeb093ada"
+    }
+  ],
+  "containerPath" : "/Users/choiseoyeon/Desktop/iOS Project/Inflearn iOS14 Lecture/SettingCloneApp/SettingCloneApp.xcodeproj",
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "indexbuild",
+    "activeArchitecture" : "x86_64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "iphonesimulator",
+      "sdk" : "iphonesimulator15.0",
+      "sdkVariant" : "iphonesimulator",
+      "supportedArchitectures" : [
+        "x86_64"
+      ],
+      "targetArchitecture" : "x86_64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/choiseoyeon/Desktop/iOS Project/Inflearn iOS14 Lecture/SettingCloneApp/DerivedData/SettingCloneApp/Index/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/choiseoyeon/Desktop/iOS Project/Inflearn iOS14 Lecture/SettingCloneApp/DerivedData/SettingCloneApp/Index/Build/Products",
+      "derivedDataPath" : "/Users/choiseoyeon/Desktop/iOS Project/Inflearn iOS14 Lecture/SettingCloneApp/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/choiseoyeon/Desktop/iOS Project/Inflearn iOS14 Lecture/SettingCloneApp/DerivedData/SettingCloneApp/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/choiseoyeon/Desktop/iOS Project/Inflearn iOS14 Lecture/SettingCloneApp/DerivedData/SettingCloneApp/Index/PrecompiledHeaders",
+      "pchPath" : "/Users/choiseoyeon/Desktop/iOS Project/Inflearn iOS14 Lecture/SettingCloneApp/DerivedData/SettingCloneApp/Index/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO",
+          "ONLY_ACTIVE_ARCH" : "YES"
+        }
+      }
+    }
+  },
+  "qos" : "utility",
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
