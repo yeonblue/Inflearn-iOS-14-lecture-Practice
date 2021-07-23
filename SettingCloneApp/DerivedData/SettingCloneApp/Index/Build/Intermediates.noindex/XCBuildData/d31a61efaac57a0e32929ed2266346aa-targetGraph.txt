@@ -1,3 +1,0 @@
-Target dependency graph (2 targets)
-SettingCloneApp in SettingCloneApp, no dependencies
-SettingCloneApp in SettingCloneApp, no dependencies

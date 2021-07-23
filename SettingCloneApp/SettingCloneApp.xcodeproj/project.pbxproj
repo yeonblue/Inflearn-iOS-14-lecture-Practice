@@ -13,6 +13,10 @@
 		45C566C926AA9FD400A6AC70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45C566C726AA9FD400A6AC70 /* Main.storyboard */; };
 		45C566CB26AA9FD500A6AC70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45C566CA26AA9FD500A6AC70 /* Assets.xcassets */; };
 		45C566CE26AA9FD500A6AC70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45C566CC26AA9FD500A6AC70 /* LaunchScreen.storyboard */; };
+		45C566D726AAA4CF00A6AC70 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C566D526AAA4CF00A6AC70 /* ProfileTableViewCell.swift */; };
+		45C566D826AAA4CF00A6AC70 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45C566D626AAA4CF00A6AC70 /* ProfileTableViewCell.xib */; };
+		45C566DC26AAAD9400A6AC70 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C566DA26AAAD9400A6AC70 /* MenuTableViewCell.swift */; };
+		45C566DD26AAAD9400A6AC70 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45C566DB26AAAD9400A6AC70 /* MenuTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		45C566CA26AA9FD500A6AC70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45C566CD26AA9FD500A6AC70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45C566CF26AA9FD500A6AC70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45C566D526AAA4CF00A6AC70 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		45C566D626AAA4CF00A6AC70 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		45C566DA26AAAD9400A6AC70 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		45C566DB26AAAD9400A6AC70 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			children = (
 				45C566C126AA9FD400A6AC70 /* AppDelegate.swift */,
 				45C566C326AA9FD400A6AC70 /* SceneDelegate.swift */,
+				45C566D926AAA4D900A6AC70 /* Model */,
 				45C566C526AA9FD400A6AC70 /* ViewController.swift */,
 				45C566C726AA9FD400A6AC70 /* Main.storyboard */,
 				45C566CA26AA9FD500A6AC70 /* Assets.xcassets */,
@@ -65,6 +74,17 @@
 				45C566CF26AA9FD500A6AC70 /* Info.plist */,
 			);
 			path = SettingCloneApp;
+			sourceTree = "<group>";
+		};
+		45C566D926AAA4D900A6AC70 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				45C566D526AAA4CF00A6AC70 /* ProfileTableViewCell.swift */,
+				45C566D626AAA4CF00A6AC70 /* ProfileTableViewCell.xib */,
+				45C566DA26AAAD9400A6AC70 /* MenuTableViewCell.swift */,
+				45C566DB26AAAD9400A6AC70 /* MenuTableViewCell.xib */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				45C566CE26AA9FD500A6AC70 /* LaunchScreen.storyboard in Resources */,
+				45C566D826AAA4CF00A6AC70 /* ProfileTableViewCell.xib in Resources */,
 				45C566CB26AA9FD500A6AC70 /* Assets.xcassets in Resources */,
+				45C566DD26AAAD9400A6AC70 /* MenuTableViewCell.xib in Resources */,
 				45C566C926AA9FD400A6AC70 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,8 +161,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				45C566C626AA9FD400A6AC70 /* ViewController.swift in Sources */,
+				45C566D726AAA4CF00A6AC70 /* ProfileTableViewCell.swift in Sources */,
 				45C566C226AA9FD400A6AC70 /* AppDelegate.swift in Sources */,
 				45C566C426AA9FD400A6AC70 /* SceneDelegate.swift in Sources */,
+				45C566DC26AAAD9400A6AC70 /* MenuTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
