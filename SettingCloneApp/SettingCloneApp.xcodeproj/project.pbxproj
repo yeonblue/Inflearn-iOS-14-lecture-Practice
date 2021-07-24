@@ -11,6 +11,8 @@
 		45C42B7B26ABA620009E5D30 /* GeneralMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C42B7A26ABA620009E5D30 /* GeneralMenuViewController.swift */; };
 		45C42B7D26ABA655009E5D30 /* GeneralMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45C42B7C26ABA655009E5D30 /* GeneralMenuViewController.storyboard */; };
 		45C42B7F26ABC060009E5D30 /* SettingGeneralModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C42B7E26ABC060009E5D30 /* SettingGeneralModel.swift */; };
+		45C42B8326ABD1B3009E5D30 /* SettingIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C42B8126ABD1B3009E5D30 /* SettingIDViewController.swift */; };
+		45C42B8426ABD1B3009E5D30 /* SettingIDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45C42B8226ABD1B3009E5D30 /* SettingIDViewController.xib */; };
 		45C566C226AA9FD400A6AC70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C566C126AA9FD400A6AC70 /* AppDelegate.swift */; };
 		45C566C426AA9FD400A6AC70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C566C326AA9FD400A6AC70 /* SceneDelegate.swift */; };
 		45C566C626AA9FD400A6AC70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C566C526AA9FD400A6AC70 /* ViewController.swift */; };
@@ -28,6 +30,8 @@
 		45C42B7A26ABA620009E5D30 /* GeneralMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMenuViewController.swift; sourceTree = "<group>"; };
 		45C42B7C26ABA655009E5D30 /* GeneralMenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GeneralMenuViewController.storyboard; sourceTree = "<group>"; };
 		45C42B7E26ABC060009E5D30 /* SettingGeneralModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingGeneralModel.swift; sourceTree = "<group>"; };
+		45C42B8126ABD1B3009E5D30 /* SettingIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingIDViewController.swift; sourceTree = "<group>"; };
+		45C42B8226ABD1B3009E5D30 /* SettingIDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingIDViewController.xib; sourceTree = "<group>"; };
 		45C566BE26AA9FD400A6AC70 /* SettingCloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SettingCloneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C566C126AA9FD400A6AC70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45C566C326AA9FD400A6AC70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +57,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45C42B8026ABD132009E5D30 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				45C566C526AA9FD400A6AC70 /* ViewController.swift */,
+				45C42B7A26ABA620009E5D30 /* GeneralMenuViewController.swift */,
+				45C42B7C26ABA655009E5D30 /* GeneralMenuViewController.storyboard */,
+				45C566C726AA9FD400A6AC70 /* Main.storyboard */,
+				45C42B8126ABD1B3009E5D30 /* SettingIDViewController.swift */,
+				45C42B8226ABD1B3009E5D30 /* SettingIDViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		45C566B526AA9FD400A6AC70 = {
 			isa = PBXGroup;
 			children = (
@@ -72,13 +89,10 @@
 		45C566C026AA9FD400A6AC70 /* SettingCloneApp */ = {
 			isa = PBXGroup;
 			children = (
+				45C566D926AAA4D900A6AC70 /* Model */,
+				45C42B8026ABD132009E5D30 /* ViewControllers */,
 				45C566C126AA9FD400A6AC70 /* AppDelegate.swift */,
 				45C566C326AA9FD400A6AC70 /* SceneDelegate.swift */,
-				45C566D926AAA4D900A6AC70 /* Model */,
-				45C566C526AA9FD400A6AC70 /* ViewController.swift */,
-				45C42B7A26ABA620009E5D30 /* GeneralMenuViewController.swift */,
-				45C42B7C26ABA655009E5D30 /* GeneralMenuViewController.storyboard */,
-				45C566C726AA9FD400A6AC70 /* Main.storyboard */,
 				45C566CA26AA9FD500A6AC70 /* Assets.xcassets */,
 				45C566CC26AA9FD500A6AC70 /* LaunchScreen.storyboard */,
 				45C566CF26AA9FD500A6AC70 /* Info.plist */,
@@ -158,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45C42B7D26ABA655009E5D30 /* GeneralMenuViewController.storyboard in Resources */,
+				45C42B8426ABD1B3009E5D30 /* SettingIDViewController.xib in Resources */,
 				45C566CE26AA9FD500A6AC70 /* LaunchScreen.storyboard in Resources */,
 				45C566D826AAA4CF00A6AC70 /* ProfileTableViewCell.xib in Resources */,
 				45C566CB26AA9FD500A6AC70 /* Assets.xcassets in Resources */,
@@ -173,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45C42B8326ABD1B3009E5D30 /* SettingIDViewController.swift in Sources */,
 				45C42B7B26ABA620009E5D30 /* GeneralMenuViewController.swift in Sources */,
 				45C42B7F26ABC060009E5D30 /* SettingGeneralModel.swift in Sources */,
 				45C566C626AA9FD400A6AC70 /* ViewController.swift in Sources */,

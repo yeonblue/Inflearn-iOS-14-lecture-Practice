@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19115.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19107.4"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingIDViewController" customModule="SettingCloneApp" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="6Wg-yH-1Sd" id="WRH-oW-Yry"/>
+                <outlet property="emailTextField" destination="qzB-9R-zjW" id="QDZ-6p-fbM"/>
+                <outlet property="nextButton" destination="jCB-jR-0oQ" id="gxj-xS-Kwt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Wg-yH-1Sd">
+                    <rect key="frame" x="20" y="64" width="76.666666666666671" height="34.333333333333343"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                    <connections>
+                        <action selector="cancelButtonTapped:" destination="-1" eventType="touchUpInside" id="17x-cL-tOd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCB-jR-0oQ">
+                    <rect key="frame" x="348.33333333333331" y="64" width="59.666666666666686" height="34.333333333333343"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUr-Fw-qsx">
+                    <rect key="frame" x="159" y="104" width="110" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with your Apple ID to use iCloud and other Apple services." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnv-35-vZb">
+                    <rect key="frame" x="20" y="160" width="388" height="40.666666666666657"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dci-d1-1Xo">
+                    <rect key="frame" x="20" y="232.33333333333334" width="388" height="21.666666666666657"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQ1-xW-n4S">
+                            <rect key="frame" x="0.0" y="0.0" width="68.333333333333329" height="21.666666666666668"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qzB-9R-zjW">
+                            <rect key="frame" x="88.333333333333343" y="0.0" width="299.66666666666663" height="21.666666666666668"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IJ4-Oz-3sg">
+                    <rect key="frame" x="20" y="220.66666666666666" width="388" height="1.6666666666666572"/>
+                    <color key="backgroundColor" systemColor="systemFillColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1.5" id="84g-LF-E73"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZQq-w9-yvQ">
+                    <rect key="frame" x="20" y="264" width="388" height="1.3333333333333144"/>
+                    <color key="backgroundColor" systemColor="systemFillColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1.5" id="Zcf-4I-FBn"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGn-41-S7u">
+                    <rect key="frame" x="69" y="295.33333333333331" width="290" height="34.333333333333314"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Don't have an Apple ID or forgot it?"/>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VTX-mt-04H">
+                    <rect key="frame" x="25" y="359.66666666666669" width="378" height="40"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nRy-5c-URr">
+                            <rect key="frame" x="0.0" y="2.3333333333333321" width="54.666666666666664" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Vd4-XV-kG0"/>
+                            </constraints>
+                            <imageReference key="image" image="cloud" catalog="system"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="49L-TJ-ZTa">
+                            <rect key="frame" x="64.666666666666671" y="1.6666666666666643" width="54.666666666666671" height="37"/>
+                            <imageReference key="image" image="book.fill" catalog="system"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VYM-lm-AXp">
+                            <rect key="frame" x="129.33333333333334" y="2.3333333333333321" width="54.666666666666657" height="35.666666666666671"/>
+                            <imageReference key="image" image="externaldrive.fill" catalog="system"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fms-tT-Z4i">
+                            <rect key="frame" x="194" y="0.33333333333333215" width="54.666666666666657" height="39.333333333333343"/>
+                            <imageReference key="image" image="iphone" catalog="system"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xd8-iX-ttU">
+                            <rect key="frame" x="258.66666666666669" y="1" width="54.666666666666686" height="38.666666666666671"/>
+                            <imageReference key="image" image="safari.fill" catalog="system"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gID-Dp-Rif">
+                            <rect key="frame" x="323.33333333333331" y="1" width="54.666666666666686" height="38.666666666666671"/>
+                            <imageReference key="image" image="music.note" catalog="system"/>
+                        </imageView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ZQq-w9-yvQ" secondAttribute="trailing" constant="20" id="6Bg-3q-jm4"/>
+                <constraint firstItem="6Wg-yH-1Sd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="7MI-iK-w8U"/>
+                <constraint firstItem="VTX-mt-04H" firstAttribute="top" secondItem="XGn-41-S7u" secondAttribute="bottom" constant="30" id="8Af-Wo-d3K"/>
+                <constraint firstItem="XGn-41-S7u" firstAttribute="top" secondItem="ZQq-w9-yvQ" secondAttribute="bottom" constant="30" id="DFG-SY-KYW"/>
+                <constraint firstItem="ZQq-w9-yvQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="FXb-pK-5je"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VTX-mt-04H" secondAttribute="trailing" constant="25" id="G8n-eG-SKW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IJ4-Oz-3sg" secondAttribute="trailing" constant="20" id="GWr-Oa-eve"/>
+                <constraint firstItem="ZUr-Fw-qsx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PSU-7p-9PS"/>
+                <constraint firstItem="xnv-35-vZb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="QM3-JK-L5B"/>
+                <constraint firstItem="VTX-mt-04H" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Vlr-hL-twz"/>
+                <constraint firstItem="dci-d1-1Xo" firstAttribute="top" secondItem="IJ4-Oz-3sg" secondAttribute="bottom" constant="10" id="VuA-Uj-4nV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jCB-jR-0oQ" secondAttribute="trailing" constant="20" id="WBy-AZ-OKI"/>
+                <constraint firstItem="XGn-41-S7u" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XM5-Xk-aCX"/>
+                <constraint firstItem="xnv-35-vZb" firstAttribute="top" secondItem="ZUr-Fw-qsx" secondAttribute="bottom" constant="20" id="YIP-7M-fJZ"/>
+                <constraint firstItem="dci-d1-1Xo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Zzx-CO-a6d"/>
+                <constraint firstItem="jCB-jR-0oQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="a9q-T3-9Hs"/>
+                <constraint firstItem="ZQq-w9-yvQ" firstAttribute="top" secondItem="dci-d1-1Xo" secondAttribute="bottom" constant="10" id="cDY-Yb-tTj"/>
+                <constraint firstItem="6Wg-yH-1Sd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="cov-2P-mRb"/>
+                <constraint firstItem="ZUr-Fw-qsx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="dNR-Re-hIw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dci-d1-1Xo" secondAttribute="trailing" constant="20" id="ghI-VG-ZFd"/>
+                <constraint firstItem="IJ4-Oz-3sg" firstAttribute="top" secondItem="xnv-35-vZb" secondAttribute="bottom" constant="20" id="nV6-xG-9LD"/>
+                <constraint firstItem="IJ4-Oz-3sg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="tgM-IG-BdO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xnv-35-vZb" secondAttribute="trailing" constant="20" id="v8Q-Hl-AiG"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="125.89285714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="book.fill" catalog="system" width="128" height="95"/>
+        <image name="cloud" catalog="system" width="128" height="88"/>
+        <image name="externaldrive.fill" catalog="system" width="128" height="87"/>
+        <image name="iphone" catalog="system" width="108" height="128"/>
+        <image name="music.note" catalog="system" width="97" height="128"/>
+        <image name="safari.fill" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

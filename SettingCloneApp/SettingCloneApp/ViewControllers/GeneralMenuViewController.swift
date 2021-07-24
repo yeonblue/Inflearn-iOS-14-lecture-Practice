@@ -87,4 +87,8 @@ extension GeneralMenuViewController: UITableViewDelegate, UITableViewDataSource 
         cell.generateCell(data: data[indexPath.section][indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }

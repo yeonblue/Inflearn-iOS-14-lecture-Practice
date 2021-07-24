@@ -91,7 +91,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 1 && indexPath.row == 0 {
+        tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.section == 0 && indexPath.row == 0{
+            let settingIDVC = SettingIDViewController(nibName: "SettingIDViewController",
+                                                      bundle: nil)
+            self.present(settingIDVC, animated: true, completion: nil)
+            
+        } else if indexPath.section == 1 && indexPath.row == 0 {
             let generalVC = UIStoryboard(name: "GeneralMenuViewController", bundle: nil)
                 .instantiateViewController(withIdentifier: "GeneralMenuViewController") as! GeneralMenuViewController
             
