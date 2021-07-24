@@ -19,6 +19,7 @@ class ProfileTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         makeImageCircle()
+        setUpLabels()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -39,4 +40,9 @@ class ProfileTableViewCell: UITableViewCell {
         detailLabel.font = .systemFont(ofSize: 16)
     }
     
+    func generateCell(data: SettingModel) {
+        profileImageView.image = UIImage(systemName: data.leftImageName)
+        mainLabel.text = data.menuTitle
+        detailLabel.text = data.subTitle
+    }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45C42B7926AB974A009E5D30 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C42B7826AB974A009E5D30 /* SettingModel.swift */; };
 		45C566C226AA9FD400A6AC70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C566C126AA9FD400A6AC70 /* AppDelegate.swift */; };
 		45C566C426AA9FD400A6AC70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C566C326AA9FD400A6AC70 /* SceneDelegate.swift */; };
 		45C566C626AA9FD400A6AC70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C566C526AA9FD400A6AC70 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45C42B7826AB974A009E5D30 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		45C566BE26AA9FD400A6AC70 /* SettingCloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SettingCloneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C566C126AA9FD400A6AC70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45C566C326AA9FD400A6AC70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				45C566D626AAA4CF00A6AC70 /* ProfileTableViewCell.xib */,
 				45C566DA26AAAD9400A6AC70 /* MenuTableViewCell.swift */,
 				45C566DB26AAAD9400A6AC70 /* MenuTableViewCell.xib */,
+				45C42B7826AB974A009E5D30 /* SettingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 			files = (
 				45C566C626AA9FD400A6AC70 /* ViewController.swift in Sources */,
 				45C566D726AAA4CF00A6AC70 /* ProfileTableViewCell.swift in Sources */,
+				45C42B7926AB974A009E5D30 /* SettingModel.swift in Sources */,
 				45C566C226AA9FD400A6AC70 /* AppDelegate.swift in Sources */,
 				45C566C426AA9FD400A6AC70 /* SceneDelegate.swift in Sources */,
 				45C566DC26AAAD9400A6AC70 /* MenuTableViewCell.swift in Sources */,

@@ -12,6 +12,13 @@ private let MenuReuseIdentifier = "MenuTableViewCell"
 
 class ViewController: UIViewController {
 
+    // MARK: Properties
+    var settingModel: [[SettingModel]]? {
+        didSet {
+            menuTableView.reloadData()
+        }
+    }
+    
     // MARK: IBOutlets
     @IBOutlet weak var menuTableView: UITableView!
     
@@ -20,6 +27,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         setUpMenuTableView()
+        setupData()
     }
 
     // MARK: - Setup
@@ -36,21 +44,33 @@ class ViewController: UIViewController {
         menuTableView.delegate = self
         
     }
+    func setupData() {
+        settingModel = SettingModel.makeData()
+    }
 }
 
 // MARK: UITableViewDelegate/DataSource
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        settingModel?.count ?? 0
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        settingModel?[section].count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: profileMenuReuseIdentifier, for: indexPath)
+        guard let settingModel = settingModel else { return UITableViewCell() }
+        
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: profileMenuReuseIdentifier, for: indexPath) as! ProfileTableViewCell
+            cell.generateCell(data: settingModel[indexPath.section][indexPath.row])
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: MenuReuseIdentifier, for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: MenuReuseIdentifier, for: indexPath) as! MenuTableViewCell
+            cell.generateCell(data: settingModel[indexPath.section][indexPath.row])
             return cell
         }
 
@@ -63,5 +83,4 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return 44
         }
     }
-    
 }
