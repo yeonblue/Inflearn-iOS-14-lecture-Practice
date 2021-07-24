@@ -26,12 +26,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUpMenuTableView()
-        setupData()
+        setupMenuTableView()
+        getSettingModelData()
+        setupNavigationInfo()
     }
 
     // MARK: - Setup
-    func setUpMenuTableView() {
+    func setupMenuTableView() {
         let profileTableViewCellNib = UINib(nibName: "ProfileTableViewCell", bundle: nil)
         menuTableView.register(profileTableViewCellNib,
                                forCellReuseIdentifier: profileMenuReuseIdentifier)
@@ -44,8 +45,13 @@ class ViewController: UIViewController {
         menuTableView.delegate = self
         
     }
-    func setupData() {
-        settingModel = SettingModel.makeData()
+    func getSettingModelData() {
+        settingModel = SettingModel.makeSettingData()
+    }
+    
+    func setupNavigationInfo() {
+        navigationItem.title = "Settings"
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
 
@@ -81,6 +87,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableView.automaticDimension
         } else {
             return 44
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 && indexPath.row == 0 {
+            let generalVC = UIStoryboard(name: "GeneralMenuViewController", bundle: nil)
+                .instantiateViewController(withIdentifier: "GeneralMenuViewController") as! GeneralMenuViewController
+            
+            self.navigationController?.pushViewController(generalVC, animated: true)
         }
     }
 }

@@ -13,7 +13,7 @@ struct SettingModel {
     var subTitle: String?
     var rightImageName: String?
     
-    static func makeData() -> [[SettingModel]] {
+    static func makeSettingData() -> [[SettingModel]] {
         let data =
         [
             [SettingModel(leftImageName: "person.circle",
