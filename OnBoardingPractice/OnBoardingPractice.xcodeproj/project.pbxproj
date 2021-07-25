@@ -64,9 +64,9 @@
 			children = (
 				45C42BCC26AD274D009E5D30 /* OnBoardingPageViewController */,
 				45C42BC726AD1FB2009E5D30 /* OnBoardingViewController */,
+				45C42BB726AD1703009E5D30 /* ViewController.swift */,
 				45C42BB326AD1703009E5D30 /* AppDelegate.swift */,
 				45C42BB526AD1703009E5D30 /* SceneDelegate.swift */,
-				45C42BB726AD1703009E5D30 /* ViewController.swift */,
 				45C42BB926AD1703009E5D30 /* Main.storyboard */,
 				45C42BBC26AD1706009E5D30 /* Assets.xcassets */,
 				45C42BBE26AD1706009E5D30 /* LaunchScreen.storyboard */,

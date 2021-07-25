@@ -124,10 +124,6 @@ class OnBoardingPageViewController: UIPageViewController {
             hideButton()
         }
         
-//        UIView.animate(withDuration: 0.25) {
-//            self.view.layoutIfNeeded()
-//        }
-        
         UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.25,
                                                        delay: 0,
                                                        options: [.curveEaseIn],

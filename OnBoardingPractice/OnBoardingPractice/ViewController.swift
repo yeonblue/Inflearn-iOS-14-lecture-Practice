@@ -42,11 +42,16 @@ class ViewController: UIViewController {
     }
     
     func showOnBoardingPageViewController() {
-        let pageVC = OnBoardingPageViewController(transitionStyle: .scroll,
-                                                  navigationOrientation: .horizontal,
-                                                  options: nil
-        )
-        self.present(pageVC, animated: true, completion: nil)
+        
+        if didShowOnBoardingViewController == false {
+            let pageVC = OnBoardingPageViewController(transitionStyle: .pageCurl,
+                                                      navigationOrientation: .horizontal,
+                                                      options: nil)
+            self.modalPresentationStyle = .fullScreen
+            self.present(pageVC, animated: true, completion: nil)
+            
+            didShowOnBoardingViewController = true
+        }
     }
 }
 

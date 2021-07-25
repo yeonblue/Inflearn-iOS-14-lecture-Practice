@@ -22,7 +22,8 @@ class DraggableView: UIView {
     init() {
         super.init(frame: .zero)
         
-        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(dragViewSelector))
+        let panGesture = UIPanGestureRecognizer(target: self,
+                                                action: #selector(dragViewSelector))
         self.addGestureRecognizer(panGesture)
     }
     
