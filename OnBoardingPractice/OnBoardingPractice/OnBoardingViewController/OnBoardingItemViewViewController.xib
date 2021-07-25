@@ -30,13 +30,13 @@
                     <imageReference key="image" image="1"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHH-Re-d0c">
-                    <rect key="frame" x="20" y="488" width="374" height="30"/>
+                    <rect key="frame" x="20" y="468" width="374" height="30"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KwR-UZ-LiH">
-                    <rect key="frame" x="20" y="548" width="374" height="20.5"/>
+                    <rect key="frame" x="20" y="513" width="374" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -47,9 +47,9 @@
             <constraints>
                 <constraint firstItem="Sje-8L-ila" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="3Li-R7-rjw"/>
                 <constraint firstItem="YHH-Re-d0c" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Bsx-2x-fMy"/>
-                <constraint firstItem="KwR-UZ-LiH" firstAttribute="top" secondItem="YHH-Re-d0c" secondAttribute="bottom" constant="30" id="G97-C6-uLu"/>
+                <constraint firstItem="KwR-UZ-LiH" firstAttribute="top" secondItem="YHH-Re-d0c" secondAttribute="bottom" constant="15" id="G97-C6-uLu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YHH-Re-d0c" secondAttribute="trailing" constant="20" id="LGn-u9-1ew"/>
-                <constraint firstItem="YHH-Re-d0c" firstAttribute="top" secondItem="Sje-8L-ila" secondAttribute="bottom" constant="50" id="SkW-EZ-DD0"/>
+                <constraint firstItem="YHH-Re-d0c" firstAttribute="top" secondItem="Sje-8L-ila" secondAttribute="bottom" constant="30" id="SkW-EZ-DD0"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KwR-UZ-LiH" secondAttribute="trailing" constant="20" id="o3b-bg-9ux"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Sje-8L-ila" secondAttribute="trailing" constant="20" id="t0e-ti-gaX"/>
                 <constraint firstItem="Sje-8L-ila" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="u0v-3S-WZl"/>

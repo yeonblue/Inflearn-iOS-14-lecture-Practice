@@ -9,6 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    // MARK: - Properteis
+    var didShowOnBoardingViewController = false
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +29,16 @@ class ViewController: UIViewController {
     
     // MARK: - OnBoarding ViewController
     func showOnBoardingViewController() {
-        let onBoardingViewController =
-        OnBoardingItemViewViewController(nibName: "OnBoardingItemViewViewController",
-                                        bundle: nil)
-        self.modalPresentationStyle = .fullScreen
-        self.present(onBoardingViewController, animated: true, completion: nil)
+        
+        if didShowOnBoardingViewController == false {
+            let onBoardingViewController =
+            OnBoardingItemViewViewController(nibName: "OnBoardingItemViewViewController",
+                                            bundle: nil)
+            self.modalPresentationStyle = .fullScreen
+            self.present(onBoardingViewController, animated: true, completion: nil)
+            
+            didShowOnBoardingViewController = true
+        }
     }
     
     func showOnBoardingPageViewController() {
