@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PhotosUI
 
 class ViewController: UIViewController {
 
@@ -28,7 +29,7 @@ class ViewController: UIViewController {
         let photoItem = UIBarButtonItem(image: UIImage(systemName: "photo.on.rectangle"),
                                         style: .done,
                                         target: self,
-                                        action: #selector(showGallery))
+                                        action: #selector(checkCameraPermission))
         photoItem.tintColor = .black.withAlphaComponent(0.75)
         
         self.navigationItem.rightBarButtonItem = photoItem
@@ -47,12 +48,68 @@ class ViewController: UIViewController {
         photoCollectionView.delegate = self
     }
     
+    // MARK: - Helpers
+
+    
     // MARK: - Selector
     @objc
-    func showGallery() {
+    func checkCameraPermission() {
+        func showGallery() {
+            let library = PHPhotoLibrary.shared()
+            var config = PHPickerConfiguration(photoLibrary: library)
+            config.selectionLimit = 10
+            
+            let pickerViewController = PHPickerViewController(configuration: config)
+            pickerViewController.delegate = self
+            
+            present(pickerViewController, animated: true, completion: nil)
+        }
         
+        func alertAndMoveSetting() {
+            let alert = UIAlertController(title: "포토라이브러리 접근 권한을 활성화 해주세요",
+                                          message: nil,
+                                          preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "닫기",
+                                          style: .cancel,
+                                          handler: nil))
+            
+            alert.addAction(UIAlertAction(title: "설정으로 이동",
+                                          style: .default,
+                                          handler: { _ in
+                guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
+                if UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        func askCameraPermission() {
+            PHPhotoLibrary.requestAuthorization { status in
+                self.checkCameraPermission()
+            }
+        }
+        
+        switch PHPhotoLibrary.authorizationStatus() {
+        
+        case .notDetermined:
+            askCameraPermission()
+        case .denied:
+            DispatchQueue.main.async {
+                alertAndMoveSetting()
+            }
+        case .authorized, .limited:
+            DispatchQueue.main.async {
+                showGallery()
+            }
+        case .restricted:
+            print("DEBUG: Permission Restricted")
+        @unknown default:
+            fatalError("Unknown Status")
+        }
     }
-
+    
     @objc
     func refreshImages() {
         
@@ -74,6 +131,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = ( UIScreen.main.bounds.width - 1 ) / 2
@@ -86,5 +144,14 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+}
+
+// MARK: - PHPickerViewControllerDelegate
+extension ViewController: PHPickerViewControllerDelegate {
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        
+        
+        self.dismiss(animated: true, completion: nil)
     }
 }
