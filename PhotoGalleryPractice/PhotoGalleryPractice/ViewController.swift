@@ -10,6 +10,13 @@ import PhotosUI
 
 class ViewController: UIViewController {
 
+    // MARK: - Properties
+    var fetchImageResults: PHFetchResult<PHAsset>? {
+        didSet {
+            photoCollectionView.reloadData()
+        }
+    }
+    
     // MARK: - IBOutlets
     @IBOutlet weak var photoCollectionView: UICollectionView!
     
@@ -24,7 +31,7 @@ class ViewController: UIViewController {
     
     // MARK: - Setup
     func setupNavtgationSettings() {
-        self.title = "Photo Gallery"
+        self.navigationItem.title = "Photo Gallery"
         
         let photoItem = UIBarButtonItem(image: UIImage(systemName: "photo.on.rectangle"),
                                         style: .done,
@@ -47,10 +54,7 @@ class ViewController: UIViewController {
         photoCollectionView.dataSource = self
         photoCollectionView.delegate = self
     }
-    
-    // MARK: - Helpers
 
-    
     // MARK: - Selector
     @objc
     func checkCameraPermission() {
@@ -112,21 +116,24 @@ class ViewController: UIViewController {
     
     @objc
     func refreshImages() {
-        
+        photoCollectionView.reloadData()
     }
 }
 
 // MARK: - UICollectionViewDataSource/Delegate
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return fetchImageResults?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView
             .dequeueReusableCell(withReuseIdentifier: PhotoCollectionViewCell.reuseIdentifier,
                                  for: indexPath) as! PhotoCollectionViewCell
-        cell.backgroundColor = .lightGray
+        if let asset = self.fetchImageResults?[indexPath.row] {
+            cell.loadImage(asset: asset)
+        }
+        
         return cell
     }
 }
@@ -151,7 +158,9 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 extension ViewController: PHPickerViewControllerDelegate {
     func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         
-        
+        let assetIdentifiers = results.map { $0.assetIdentifier ?? "" }
+        fetchImageResults = PHAsset.fetchAssets(withLocalIdentifiers: assetIdentifiers, options: nil)
+
         self.dismiss(animated: true, completion: nil)
     }
 }
